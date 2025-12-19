@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Copier</title>
+    <style>
+        body {
+            font-family: arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+            text-align: center; /* Center the title for better balance */
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            display: flex; /* Use flexbox for better alignment */
+            align-items: center; /* Vertically center items */
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #fff; /* Add background for each item */
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+            flex-grow: 1; /* Let the link take up available space */
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .copy-button {
+            margin-left: 10px;
+            padding: 5px 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px; /* Rounded button */
+        }
+        .copy-button:hover {
+            background-color: #218838;
+        }
+    </style>
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                alert("Copied to clipboard!");
+            }, function(err) {
+                console.error("Could not copy: ", err);
+                alert("Copy failed. Try manually selecting and copying the link.");
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>ALL LINK COPIER</h1>
+    <ul>
+        <li><a href="https://ssccbt.cbexams.com/sscchat_dpc/Admin_Login.aspx" target="_blank">CHAT ADMIN</a><button class="copy-button" onclick="copyToClipboard('https://ssccbt.cbexams.com/sscchat_dpc/Admin_Login.aspx')">Copy</button></li>
+        <li><a href="https://ssccbt.cbexams.com/sscchat_dpc/Default.aspx" target="_blank">CHAT CENTER LOGIN</a><button class="copy-button" onclick="copyToClipboard('https://ssccbt.cbexams.com/sscchat_dpc/Default.aspx')">Copy</button></li>
+        <li><a href="https://ssccbt.cbexams.com/HR_PORTAL_SSC/admin_login.aspx" target="_blank">HR ADMIN LOGIN</a><button class="copy-button" onclick="copyToClipboard('https://ssccbt.cbexams.com/HR_PORTAL_SSC/admin_login.aspx')">Copy</button></li>
+        <li><a href="https://ssccbt.cbexams.com/HR_PORTAL_SSC/login.aspx" target="_blank">HR CENTER LOGIN</a><button class="copy-button" onclick="copyToClipboard('https://ssccbt.cbexams.com/HR_PORTAL_SSC/login.aspx')">Copy</button></li>
+        <li><a href="https://ssccbt.cbexams.com/movesoftcopy/Main.aspx" target="_blank">POST EXAM</a><button class="copy-button" onclick="copyToClipboard('https://ssccbt.cbexams.com/movesoftcopy/Main.aspx')">Copy</button></li>
+        <li><a href="https://ssccbt.cbexams.com/importresp/Adminlogin.aspx" target="_blank">RESPONSES IMPORT</a><button class="copy-button" onclick="copyToClipboard('https://ssccbt.cbexams.com/importresp/Adminlogin.aspx')">Copy</button></li>
+        <li><a href="https://ssccbt.cbexams.com/SSCLiveReports/Response_Count_Mismatch.aspx" target="_blank">COUNT MISMATCH</a><button class="copy-button" onclick="copyToClipboard('https://ssccbt.cbexams.com/SSCLiveReports/Response_Count_Mismatch.aspx')">Copy</button></li>
+        <li><a href="https://ssccbt.cbexams.com/mcfilesreport/Filesreport_Slot-1.aspx" target="_blank">FILE REPORT</a><button class="copy-button" onclick="copyToClipboard('https://ssccbt.cbexams.com/mcfilesreport/Filesreport_Slot-1.aspx')">Copy</button></li>
+    </ul>
+</body>
+</html>
